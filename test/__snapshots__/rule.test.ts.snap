@@ -10,7 +10,7 @@ Object {
     },
   },
   "Resources": Object {
-    "EcsFargateTaskTerminationDetectionNotificationEventRule4DD770E6": Object {
+    "EcsFargateTaskTerminationDetectionEventRuleDB58C924": Object {
       "Properties": Object {
         "Description": "example event rule.",
         "EventPattern": Object {

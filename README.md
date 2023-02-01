@@ -23,11 +23,11 @@ npm install @yicr/ecs-fargate-task-termination-detection-event-rule
 ```
 
 ```typescript
-import { EcsFargateTaskTerminationDetectionNotificationEventRule } from '@yicr/ecs-fargate-task-termination-detection-event-rule';
+import { EcsFargateTaskTerminationDetectionEventRule } from '@yicr/ecs-fargate-task-termination-detection-event-rule';
 
 const clusterArn = 'arn:aws:ecs:us-east-1:123456789012:cluster/example-app-cluster';
 
-const rule = new EcsFargateTaskTerminationDetectionNotificationEventRule(stack, 'EcsFargateTaskTerminationDetectionNotificationEventRule', {
+const rule = new EcsFargateTaskTerminationDetectionEventRule(stack, 'EcsFargateTaskTerminationDetectionEventRule', {
   ruleName: 'example-event-rule',
   description: 'example event rule.',
   clusterArn,

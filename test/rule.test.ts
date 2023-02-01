@@ -1,7 +1,7 @@
 import { App, Stack } from 'aws-cdk-lib';
 import { Match, Template } from 'aws-cdk-lib/assertions';
 import * as events from 'aws-cdk-lib/aws-events';
-import { EcsFargateTaskTerminationDetectionNotificationEventRule } from '../src';
+import { EcsFargateTaskTerminationDetectionEventRule } from '../src';
 
 describe('EcsFargateTaskTerminationDetectionNotificationEventRule Testing', () => {
   const app = new App();
@@ -14,7 +14,7 @@ describe('EcsFargateTaskTerminationDetectionNotificationEventRule Testing', () =
 
   const clusterArn = 'arn:aws:ecs:us-east-1:123456789012:cluster/example-app-cluster';
 
-  const rule = new EcsFargateTaskTerminationDetectionNotificationEventRule(stack, 'EcsFargateTaskTerminationDetectionNotificationEventRule', {
+  const rule = new EcsFargateTaskTerminationDetectionEventRule(stack, 'EcsFargateTaskTerminationDetectionEventRule', {
     ruleName: 'example-event-rule',
     description: 'example event rule.',
     clusterArn,

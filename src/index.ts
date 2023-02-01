@@ -1,15 +1,15 @@
 import * as events from 'aws-cdk-lib/aws-events';
 import { Construct } from 'constructs';
 
-export interface EcsFargateTaskTerminationDetectionNotificationEventRuleProps {
+export interface EcsFargateTaskTerminationDetectionEventRuleProps {
   readonly ruleName?: string;
   readonly description?: string;
   readonly clusterArn: string;
 }
 
-export class EcsFargateTaskTerminationDetectionNotificationEventRule extends events.Rule {
+export class EcsFargateTaskTerminationDetectionEventRule extends events.Rule {
 
-  constructor(scope: Construct, id: string, props: EcsFargateTaskTerminationDetectionNotificationEventRuleProps) {
+  constructor(scope: Construct, id: string, props: EcsFargateTaskTerminationDetectionEventRuleProps) {
     super(scope, id, {
       ruleName: props.ruleName,
       description: props.description,
