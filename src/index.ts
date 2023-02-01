@@ -5,7 +5,6 @@ export interface EcsFargateTaskTerminationDetectionNotificationEventRuleProps {
   readonly ruleName: string;
   readonly description: string;
   readonly clusterArn: string;
-  readonly targets?: events.IRuleTarget[];
 }
 
 export class EcsFargateTaskTerminationDetectionNotificationEventRule extends events.Rule {
