@@ -2,8 +2,8 @@ import * as events from 'aws-cdk-lib/aws-events';
 import { Construct } from 'constructs';
 
 export interface EcsFargateTaskTerminationDetectionNotificationEventRuleProps {
-  readonly ruleName: string;
-  readonly description: string;
+  readonly ruleName?: string;
+  readonly description?: string;
   readonly clusterArn: string;
 }
 
