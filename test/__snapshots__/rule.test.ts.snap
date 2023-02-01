@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EcsFargateTaskTerminationDetectionNotificationEventRule Testing Should match snapshot. 1`] = `
+Object {
+  "Parameters": Object {
+    "BootstrapVersion": Object {
+      "Default": "/cdk-bootstrap/hnb659fds/version",
+      "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]",
+      "Type": "AWS::SSM::Parameter::Value<String>",
+    },
+  },
+  "Resources": Object {
+    "EcsFargateTaskTerminationDetectionNotificationEventRule4DD770E6": Object {
+      "Properties": Object {
+        "Description": "example event rule.",
+        "EventPattern": Object {
+          "detail": Object {
+            "clusterArn": "arn:aws:ecs:us-east-1:123456789012:cluster/example-app-cluster",
+            "containers": Object {
+              "exitCode": Array [
+                Object {
+                  "anything-but": 0,
+                },
+              ],
+            },
+            "lastStatus": Array [
+              "STOPPED",
+            ],
+            "stoppedReason": Array [
+              Object {
+                "anything-but": Object {
+                  "prefix": "Scaling activity initiated by",
+                },
+              },
+            ],
+          },
+          "detail-type": Array [
+            "ECS Task State Change",
+          ],
+          "source": Array [
+            "aws.ecs",
+          ],
+        },
+        "Name": "example-event-rule",
+        "State": "ENABLED",
+      },
+      "Type": "AWS::Events::Rule",
+    },
+  },
+  "Rules": Object {
+    "CheckBootstrapVersion": Object {
+      "Assertions": Array [
+        Object {
+          "Assert": Object {
+            "Fn::Not": Array [
+              Object {
+                "Fn::Contains": Array [
+                  Array [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                  ],
+                  Object {
+                    "Ref": "BootstrapVersion",
+                  },
+                ],
+              },
+            ],
+          },
+          "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI.",
+        },
+      ],
+    },
+  },
+}
+`;
