@@ -1,4 +1,4 @@
-# ECS Fargate task termination detection notification event rule
+# AWS ECS Fargate task termination detection notification event rule
 
 This an AWS ECS Fargate task termination detection Event Rule.
 
@@ -7,11 +7,11 @@ This an AWS ECS Fargate task termination detection Event Rule.
 ### TypeScript
 
 ```shell
-npm install @yicr/ecs-fargate-task-termination-detection-event-rule
+npm install @yicr/aws-ecs-fargate-task-termination-detection-event-rule
 ```
 or
 ```shell
-yarn add @yicr/ecs-fargate-task-termination-detection-event-rule
+yarn add @yicr/aws-ecs-fargate-task-termination-detection-event-rule
 ```
 
 ## Example
@@ -19,11 +19,11 @@ yarn add @yicr/ecs-fargate-task-termination-detection-event-rule
 ### TypeScript
 
 ```shell
-npm install @yicr/ecs-fargate-task-termination-detection-event-rule
+npm install @yicr/aws-ecs-fargate-task-termination-detection-event-rule
 ```
 
 ```typescript
-import { EcsFargateTaskTerminationDetectionEventRule } from '@yicr/ecs-fargate-task-termination-detection-event-rule';
+import { EcsFargateTaskTerminationDetectionEventRule } from '@yicr/aws-ecs-fargate-task-termination-detection-event-rule';
 
 const clusterArn = 'arn:aws:ecs:us-east-1:123456789012:cluster/example-app-cluster';
 
