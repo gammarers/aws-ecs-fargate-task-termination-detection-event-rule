@@ -1,9 +1,9 @@
 {
-  "name": "@yicr/ecs-fargate-task-termination-detection-event-rule",
+  "name": "@yicr/aws-ecs-fargate-task-termination-detection-event-rule",
   "description": "This an AWS ECS Fargate task termination detection Event Rule.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yicr/ecs-fargate-task-termination-detection-event-rule.git"
+    "url": "https://github.com/yicr/aws-ecs-fargate-task-termination-detection-event-rule.git"
   },
   "scripts": {
     "build": "npx projen build",
