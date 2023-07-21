@@ -1,5 +1,5 @@
 {
-  "name": "@yicr/aws-ecs-fargate-task-termination-detection-event-rule",
+  "name": "@gammarer/aws-ecs-fargate-task-termination-detection-event-rule",
   "description": "This an AWS ECS Fargate task termination detection Event Rule.",
   "repository": {
     "type": "git",
