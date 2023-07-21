@@ -22,5 +22,9 @@ const project = new awscdk.AwsCdkConstructLibrary({
     secret: 'GITHUB_TOKEN',
     allowedUsernames: ['yicr'],
   },
+  publishToPypi: {
+    distName: 'gammarer.aws-ecs-fargate-task-termination-detection-event-rule',
+    module: 'gammarer.aws_ecs_fargate_task_termination_detection_event_rule',
+  },
 });
 project.synth();
