@@ -4,7 +4,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   authorAddress: 'yicr@users.noreply.github.com',
   cdkVersion: '2.62.2',
   defaultReleaseBranch: 'main',
-  name: '@yicr/aws-ecs-fargate-task-termination-detection-event-rule',
+  name: '@gammarer/aws-ecs-fargate-task-termination-detection-event-rule',
   description: 'This an AWS ECS Fargate task termination detection Event Rule.',
   keywords: ['aws', 'cdk', 'aws-cdk', 'event', 'rule', 'ecs', 'fargate'],
   projenrcTs: true,
@@ -21,6 +21,10 @@ const project = new awscdk.AwsCdkConstructLibrary({
   autoApproveOptions: {
     secret: 'GITHUB_TOKEN',
     allowedUsernames: ['yicr'],
+  },
+  publishToPypi: {
+    distName: 'gammarer.aws-ecs-fargate-task-termination-detection-event-rule',
+    module: 'gammarer.aws_ecs_fargate_task_termination_detection_event_rule',
   },
 });
 project.synth();

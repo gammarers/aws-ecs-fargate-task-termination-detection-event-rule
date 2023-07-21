@@ -7,11 +7,15 @@ This an AWS ECS Fargate task termination detection Event Rule.
 ### TypeScript
 
 ```shell
-npm install @yicr/aws-ecs-fargate-task-termination-detection-event-rule
+npm install @gammarer/aws-ecs-fargate-task-termination-detection-event-rule
+# or
+yarn add @gammarer/aws-ecs-fargate-task-termination-detection-event-rule
 ```
-or
+
+### Python
+
 ```shell
-yarn add @yicr/aws-ecs-fargate-task-termination-detection-event-rule
+pip install gammarer.aws-ecs-fargate-task-termination-detection-event-rule
 ```
 
 ## Example
@@ -19,11 +23,11 @@ yarn add @yicr/aws-ecs-fargate-task-termination-detection-event-rule
 ### TypeScript
 
 ```shell
-npm install @yicr/aws-ecs-fargate-task-termination-detection-event-rule
+npm install @gammarer/aws-ecs-fargate-task-termination-detection-event-rule
 ```
 
 ```typescript
-import { EcsFargateTaskTerminationDetectionEventRule } from '@yicr/aws-ecs-fargate-task-termination-detection-event-rule';
+import { EcsFargateTaskTerminationDetectionEventRule } from '@gammarer/aws-ecs-fargate-task-termination-detection-event-rule';
 
 const clusterArn = 'arn:aws:ecs:us-east-1:123456789012:cluster/example-app-cluster';
 
