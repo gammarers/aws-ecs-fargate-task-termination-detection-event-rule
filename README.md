@@ -18,13 +18,18 @@ yarn add @gammarer/aws-ecs-fargate-task-termination-detection-event-rule
 pip install gammarer.aws-ecs-fargate-task-termination-detection-event-rule
 ```
 
-## Example
+### Java
 
-### TypeScript
+Add the following to pom.xml:
 
-```shell
-npm install @gammarer/aws-ecs-fargate-task-termination-detection-event-rule
+```xml
+<dependency>
+  <groupId>com.gammarer</groupId>
+  <artifactId>aws-ecs-fargate-task-termination-detection-event-rule</artifactId>
+</dependency>
 ```
+
+## Example
 
 ```typescript
 import { EcsFargateTaskTerminationDetectionEventRule } from '@gammarer/aws-ecs-fargate-task-termination-detection-event-rule';
