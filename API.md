@@ -145,31 +145,31 @@ these values are merged into the existing pattern.
 
 For example, if the rule already contains the pattern:
 
-    {
-      "resources": [ "r1" ],
-      "detail": {
-        "hello": [ 1 ]
-      }
-    }
+   {
+     "resources": [ "r1" ],
+     "detail": {
+       "hello": [ 1 ]
+     }
+   }
 
 And `addEventPattern` is called with the pattern:
 
-    {
-      "resources": [ "r2" ],
-      "detail": {
-        "foo": [ "bar" ]
-      }
-    }
+   {
+     "resources": [ "r2" ],
+     "detail": {
+       "foo": [ "bar" ]
+     }
+   }
 
 The resulting event pattern will be:
 
-    {
-      "resources": [ "r1", "r2" ],
-      "detail": {
-        "hello": [ 1 ],
-        "foo": [ "bar" ]
-      }
-    }
+   {
+     "resources": [ "r1", "r2" ],
+     "detail": {
+       "hello": [ 1 ],
+       "foo": [ "bar" ]
+     }
+   }
 
 ###### `eventPattern`<sup>Optional</sup> <a name="eventPattern" id="@gammarer/aws-ecs-fargate-task-termination-detection-event-rule.EcsFargateTaskTerminationDetectionEventRule.addEventPattern.parameter.eventPattern"></a>
 
