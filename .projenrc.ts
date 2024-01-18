@@ -4,7 +4,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   authorAddress: 'yicr@users.noreply.github.com',
   cdkVersion: '2.80.0',
   typescriptVersion: '5.1.x',
-  jsiiVersion: '~5.0.0',
+  jsiiVersion: '5.1.x',
   defaultReleaseBranch: 'main',
   name: '@gammarer/aws-ecs-fargate-task-termination-detection-event-rule',
   description: 'This an AWS ECS Fargate task termination detection Event Rule.',
