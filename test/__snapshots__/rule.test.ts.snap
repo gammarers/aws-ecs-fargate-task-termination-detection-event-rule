@@ -1,43 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`EcsFargateTaskTerminationDetectionNotificationEventRule Testing Should match snapshot. 1`] = `
-Object {
-  "Parameters": Object {
-    "BootstrapVersion": Object {
+{
+  "Parameters": {
+    "BootstrapVersion": {
       "Default": "/cdk-bootstrap/hnb659fds/version",
       "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]",
       "Type": "AWS::SSM::Parameter::Value<String>",
     },
   },
-  "Resources": Object {
-    "EcsFargateTaskTerminationDetectionEventRuleDB58C924": Object {
-      "Properties": Object {
+  "Resources": {
+    "EcsFargateTaskTerminationDetectionEventRuleDB58C924": {
+      "Properties": {
         "Description": "example event rule.",
-        "EventPattern": Object {
-          "detail": Object {
+        "EventPattern": {
+          "detail": {
             "clusterArn": "arn:aws:ecs:us-east-1:123456789012:cluster/example-app-cluster",
-            "containers": Object {
-              "exitCode": Array [
-                Object {
+            "containers": {
+              "exitCode": [
+                {
                   "anything-but": 0,
                 },
               ],
             },
-            "lastStatus": Array [
+            "lastStatus": [
               "STOPPED",
             ],
-            "stoppedReason": Array [
-              Object {
-                "anything-but": Object {
+            "stoppedReason": [
+              {
+                "anything-but": {
                   "prefix": "Scaling activity initiated by",
                 },
               },
             ],
           },
-          "detail-type": Array [
+          "detail-type": [
             "ECS Task State Change",
           ],
-          "source": Array [
+          "source": [
             "aws.ecs",
           ],
         },
@@ -47,22 +47,22 @@ Object {
       "Type": "AWS::Events::Rule",
     },
   },
-  "Rules": Object {
-    "CheckBootstrapVersion": Object {
-      "Assertions": Array [
-        Object {
-          "Assert": Object {
-            "Fn::Not": Array [
-              Object {
-                "Fn::Contains": Array [
-                  Array [
+  "Rules": {
+    "CheckBootstrapVersion": {
+      "Assertions": [
+        {
+          "Assert": {
+            "Fn::Not": [
+              {
+                "Fn::Contains": [
+                  [
                     "1",
                     "2",
                     "3",
                     "4",
                     "5",
                   ],
-                  Object {
+                  {
                     "Ref": "BootstrapVersion",
                   },
                 ],
