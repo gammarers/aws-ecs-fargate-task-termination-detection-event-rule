@@ -9,6 +9,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   name: '@gammarer/aws-ecs-fargate-task-termination-detection-event-rule',
   description: 'This an AWS ECS Fargate task termination detection Event Rule.',
   keywords: ['aws', 'cdk', 'aws-cdk', 'event', 'rule', 'ecs', 'fargate'],
+  majorVersion: 1,
   projenrcTs: true,
   repositoryUrl: 'https://github.com/yicr/aws-ecs-fargate-task-termination-detection-event-rule.git',
   npmAccess: javascript.NpmAccess.PUBLIC,
