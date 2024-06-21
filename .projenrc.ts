@@ -4,18 +4,18 @@ const project = new awscdk.AwsCdkConstructLibrary({
   authorAddress: 'yicr@users.noreply.github.com',
   cdkVersion: '2.80.0',
   constructsVersion: '10.0.5',
-  typescriptVersion: '5.1.x',
-  jsiiVersion: '5.1.x',
+  typescriptVersion: '5.3.x',
+  jsiiVersion: '5.3.x',
   defaultReleaseBranch: 'main',
-  name: '@gammarer/aws-ecs-fargate-task-termination-detection-event-rule',
+  name: '@gammarers/aws-ecs-fargate-task-termination-detection-event-rule',
   description: 'This an AWS ECS Fargate task termination detection Event Rule.',
   keywords: ['aws', 'cdk', 'aws-cdk', 'event', 'rule', 'ecs', 'fargate'],
   majorVersion: 1,
   projenrcTs: true,
-  repositoryUrl: 'https://github.com/yicr/aws-ecs-fargate-task-termination-detection-event-rule.git',
+  repositoryUrl: 'https://github.com/gammarers/aws-ecs-fargate-task-termination-detection-event-rule.git',
   npmAccess: javascript.NpmAccess.PUBLIC,
   minNodeVersion: '16.0.0',
-  workflowNodeVersion: '20.11.x',
+  workflowNodeVersion: '22.x',
   depsUpgradeOptions: {
     workflowOptions: {
       labels: ['auto-approve', 'auto-merge'],
@@ -27,14 +27,12 @@ const project = new awscdk.AwsCdkConstructLibrary({
     allowedUsernames: ['yicr'],
   },
   publishToPypi: {
-    distName: 'gammarer.aws-ecs-fargate-task-termination-detection-event-rule',
-    module: 'gammarer.aws_ecs_fargate_task_termination_detection_event_rule',
+    distName: 'gammarers.aws-ecs-fargate-task-termination-detection-event-rule',
+    module: 'gammarers.aws_ecs_fargate_task_termination_detection_event_rule',
   },
-  publishToMaven: {
-    mavenGroupId: 'com.gammarer',
-    javaPackage: 'com.gammarer.cdk.aws.ecs_fargate_task_termination_detection_event_rule',
-    mavenArtifactId: 'aws-ecs-fargate-task-termination-detection-event-rule',
-    mavenEndpoint: 'https://s01.oss.sonatype.org',
+  publishToNuget: {
+    dotNetNamespace: 'Gammarers.CDK.AWS',
+    packageId: 'Gammarers.CDK.AWS.EcsFargateTaskTerminationDetectionEventRule',
   },
 });
 project.synth();
