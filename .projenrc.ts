@@ -27,8 +27,8 @@ const project = new awscdk.AwsCdkConstructLibrary({
     allowedUsernames: ['yicr'],
   },
   publishToPypi: {
-    distName: 'gammarer.aws-ecs-fargate-task-termination-detection-event-rule',
-    module: 'gammarer.aws_ecs_fargate_task_termination_detection_event_rule',
+    distName: 'gammarers.aws-ecs-fargate-task-termination-detection-event-rule',
+    module: 'gammarers.aws_ecs_fargate_task_termination_detection_event_rule',
   },
   publishToNuget: {
     dotNetNamespace: 'Gammarers.CDK.AWS',
