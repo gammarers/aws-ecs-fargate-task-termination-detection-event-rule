@@ -30,5 +30,9 @@ const project = new awscdk.AwsCdkConstructLibrary({
     distName: 'gammarer.aws-ecs-fargate-task-termination-detection-event-rule',
     module: 'gammarer.aws_ecs_fargate_task_termination_detection_event_rule',
   },
+  publishToNuget: {
+    dotNetNamespace: 'Gammarers.CDK.AWS',
+    packageId: 'Gammarers.CDK.AWS.EcsFargateTaskTerminationDetectionEventRule',
+  },
 });
 project.synth();
