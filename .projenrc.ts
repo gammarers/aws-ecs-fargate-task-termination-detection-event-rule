@@ -30,11 +30,5 @@ const project = new awscdk.AwsCdkConstructLibrary({
     distName: 'gammarer.aws-ecs-fargate-task-termination-detection-event-rule',
     module: 'gammarer.aws_ecs_fargate_task_termination_detection_event_rule',
   },
-  publishToMaven: {
-    mavenGroupId: 'com.gammarer',
-    javaPackage: 'com.gammarer.cdk.aws.ecs_fargate_task_termination_detection_event_rule',
-    mavenArtifactId: 'aws-ecs-fargate-task-termination-detection-event-rule',
-    mavenEndpoint: 'https://s01.oss.sonatype.org',
-  },
 });
 project.synth();
