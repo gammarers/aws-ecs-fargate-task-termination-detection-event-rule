@@ -7,6 +7,8 @@
 [![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/gammarers/aws-ecs-fargate-task-termination-detection-event-rule/release.yml?branch=main&label=release&style=flat-square)](https://github.com/gammarers/aws-ecs-fargate-task-termination-detection-event-rule/actions/workflows/release.yml)
 [![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/gammarers/aws-ecs-fargate-task-termination-detection-event-rule?sort=semver&style=flat-square)](https://github.com/gammarers/aws-ecs-fargate-task-termination-detection-event-rule/releases)
 
+[![View on Construct Hub](https://constructs.dev/badge?package=@gammarers/aws-ecs-fargate-task-termination-detection-event-rule)](https://constructs.dev/packages/@gammarers/aws-ecs-fargate-task-termination-detection-event-rule)
+
 This an AWS ECS Fargate task termination detection Event Rule.
 
 ## Install
