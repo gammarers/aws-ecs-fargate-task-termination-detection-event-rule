@@ -331,19 +331,30 @@ const ecsFargateTaskTerminationDetectionEventRuleProps: EcsFargateTaskTerminatio
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
+| <code><a href="#@gammarers/aws-ecs-fargate-task-termination-detection-event-rule.EcsFargateTaskTerminationDetectionEventRuleProps.property.crossStackScope">crossStackScope</a></code> | <code>constructs.Construct</code> | The scope to use if the source of the rule and its target are in different Stacks (but in the same account & region). |
+| <code><a href="#@gammarers/aws-ecs-fargate-task-termination-detection-event-rule.EcsFargateTaskTerminationDetectionEventRuleProps.property.description">description</a></code> | <code>string</code> | A description of the rule's purpose. |
+| <code><a href="#@gammarers/aws-ecs-fargate-task-termination-detection-event-rule.EcsFargateTaskTerminationDetectionEventRuleProps.property.eventPattern">eventPattern</a></code> | <code>aws-cdk-lib.aws_events.EventPattern</code> | Additional restrictions for the event to route to the specified target. |
+| <code><a href="#@gammarers/aws-ecs-fargate-task-termination-detection-event-rule.EcsFargateTaskTerminationDetectionEventRuleProps.property.ruleName">ruleName</a></code> | <code>string</code> | A name for the rule. |
+| <code><a href="#@gammarers/aws-ecs-fargate-task-termination-detection-event-rule.EcsFargateTaskTerminationDetectionEventRuleProps.property.enabled">enabled</a></code> | <code>boolean</code> | Indicates whether the rule is enabled. |
+| <code><a href="#@gammarers/aws-ecs-fargate-task-termination-detection-event-rule.EcsFargateTaskTerminationDetectionEventRuleProps.property.eventBus">eventBus</a></code> | <code>aws-cdk-lib.aws_events.IEventBus</code> | The event bus to associate with this rule. |
+| <code><a href="#@gammarers/aws-ecs-fargate-task-termination-detection-event-rule.EcsFargateTaskTerminationDetectionEventRuleProps.property.schedule">schedule</a></code> | <code>aws-cdk-lib.aws_events.Schedule</code> | The schedule or rate (frequency) that determines when EventBridge runs the rule. |
+| <code><a href="#@gammarers/aws-ecs-fargate-task-termination-detection-event-rule.EcsFargateTaskTerminationDetectionEventRuleProps.property.targets">targets</a></code> | <code>aws-cdk-lib.aws_events.IRuleTarget[]</code> | Targets to invoke when this rule matches an event. |
 | <code><a href="#@gammarers/aws-ecs-fargate-task-termination-detection-event-rule.EcsFargateTaskTerminationDetectionEventRuleProps.property.clusterArn">clusterArn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@gammarers/aws-ecs-fargate-task-termination-detection-event-rule.EcsFargateTaskTerminationDetectionEventRuleProps.property.description">description</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@gammarers/aws-ecs-fargate-task-termination-detection-event-rule.EcsFargateTaskTerminationDetectionEventRuleProps.property.ruleName">ruleName</a></code> | <code>string</code> | *No description.* |
 
 ---
 
-##### `clusterArn`<sup>Required</sup> <a name="clusterArn" id="@gammarers/aws-ecs-fargate-task-termination-detection-event-rule.EcsFargateTaskTerminationDetectionEventRuleProps.property.clusterArn"></a>
+##### `crossStackScope`<sup>Optional</sup> <a name="crossStackScope" id="@gammarers/aws-ecs-fargate-task-termination-detection-event-rule.EcsFargateTaskTerminationDetectionEventRuleProps.property.crossStackScope"></a>
 
 ```typescript
-public readonly clusterArn: string;
+public readonly crossStackScope: Construct;
 ```
 
-- *Type:* string
+- *Type:* constructs.Construct
+- *Default:* none (the main scope will be used, even for cross-stack Events)
+
+The scope to use if the source of the rule and its target are in different Stacks (but in the same account & region).
+
+This helps dealing with cycles that often arise in these situations.
 
 ---
 
@@ -354,6 +365,28 @@ public readonly description: string;
 ```
 
 - *Type:* string
+- *Default:* No description
+
+A description of the rule's purpose.
+
+---
+
+##### `eventPattern`<sup>Optional</sup> <a name="eventPattern" id="@gammarers/aws-ecs-fargate-task-termination-detection-event-rule.EcsFargateTaskTerminationDetectionEventRuleProps.property.eventPattern"></a>
+
+```typescript
+public readonly eventPattern: EventPattern;
+```
+
+- *Type:* aws-cdk-lib.aws_events.EventPattern
+- *Default:* No additional filtering based on an event pattern.
+
+Additional restrictions for the event to route to the specified target.
+
+The method that generates the rule probably imposes some type of event
+filtering. The filtering implied by what you pass here is added
+on top of that filtering.
+
+> [https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html)
 
 ---
 
@@ -361,6 +394,81 @@ public readonly description: string;
 
 ```typescript
 public readonly ruleName: string;
+```
+
+- *Type:* string
+- *Default:* AWS CloudFormation generates a unique physical ID.
+
+A name for the rule.
+
+---
+
+##### `enabled`<sup>Optional</sup> <a name="enabled" id="@gammarers/aws-ecs-fargate-task-termination-detection-event-rule.EcsFargateTaskTerminationDetectionEventRuleProps.property.enabled"></a>
+
+```typescript
+public readonly enabled: boolean;
+```
+
+- *Type:* boolean
+- *Default:* true
+
+Indicates whether the rule is enabled.
+
+---
+
+##### `eventBus`<sup>Optional</sup> <a name="eventBus" id="@gammarers/aws-ecs-fargate-task-termination-detection-event-rule.EcsFargateTaskTerminationDetectionEventRuleProps.property.eventBus"></a>
+
+```typescript
+public readonly eventBus: IEventBus;
+```
+
+- *Type:* aws-cdk-lib.aws_events.IEventBus
+- *Default:* The default event bus.
+
+The event bus to associate with this rule.
+
+---
+
+##### `schedule`<sup>Optional</sup> <a name="schedule" id="@gammarers/aws-ecs-fargate-task-termination-detection-event-rule.EcsFargateTaskTerminationDetectionEventRuleProps.property.schedule"></a>
+
+```typescript
+public readonly schedule: Schedule;
+```
+
+- *Type:* aws-cdk-lib.aws_events.Schedule
+- *Default:* None.
+
+The schedule or rate (frequency) that determines when EventBridge runs the rule.
+
+You must specify this property, the `eventPattern` property, or both.
+
+For more information, see Schedule Expression Syntax for
+Rules in the Amazon EventBridge User Guide.
+
+> [https://docs.aws.amazon.com/eventbridge/latest/userguide/scheduled-events.html](https://docs.aws.amazon.com/eventbridge/latest/userguide/scheduled-events.html)
+
+---
+
+##### `targets`<sup>Optional</sup> <a name="targets" id="@gammarers/aws-ecs-fargate-task-termination-detection-event-rule.EcsFargateTaskTerminationDetectionEventRuleProps.property.targets"></a>
+
+```typescript
+public readonly targets: IRuleTarget[];
+```
+
+- *Type:* aws-cdk-lib.aws_events.IRuleTarget[]
+- *Default:* No targets.
+
+Targets to invoke when this rule matches an event.
+
+Input will be the full matched event. If you wish to specify custom
+target input, use `addTarget(target[, inputOptions])`.
+
+---
+
+##### `clusterArn`<sup>Required</sup> <a name="clusterArn" id="@gammarers/aws-ecs-fargate-task-termination-detection-event-rule.EcsFargateTaskTerminationDetectionEventRuleProps.property.clusterArn"></a>
+
+```typescript
+public readonly clusterArn: string;
 ```
 
 - *Type:* string
