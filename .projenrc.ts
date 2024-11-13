@@ -16,7 +16,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
     '@gammarers/aws-cdk-errors@^1.1.3',
   ],
   npmAccess: javascript.NpmAccess.PUBLIC,
-  minNodeVersion: '16.0.0',
+  minNodeVersion: '18.0.0',
   workflowNodeVersion: '22.4.x',
   depsUpgradeOptions: {
     workflowOptions: {
