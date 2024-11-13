@@ -13,6 +13,9 @@ const project = new awscdk.AwsCdkConstructLibrary({
   majorVersion: 1,
   projenrcTs: true,
   repositoryUrl: 'https://github.com/gammarers/aws-ecs-fargate-task-termination-detection-event-rule.git',
+  deps: [
+    '@gammarers/aws-cdk-errors@^1.1.3',
+  ],
   npmAccess: javascript.NpmAccess.PUBLIC,
   minNodeVersion: '16.0.0',
   workflowNodeVersion: '22.4.x',
