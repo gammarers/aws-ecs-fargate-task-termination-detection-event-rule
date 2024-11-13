@@ -1,3 +1,4 @@
+import { InvalidInternalDefinitionParameterError } from '@gammarers/aws-cdk-errors';
 import { App, Stack } from 'aws-cdk-lib';
 import { EcsFargateTaskTerminationDetectionEventRule } from '../src';
 
@@ -22,7 +23,7 @@ describe('EcsFargateTaskTerminationDetectionNotificationEventRule Testing', () =
           detailType: ['ECS Task State Change'],
         },
       });
-    }).toThrow(/InvalidArgumentException: The specified argument eventPattern is predefined and should not be changed./);
+    }).toThrow(InvalidInternalDefinitionParameterError);
   });
 
 });
