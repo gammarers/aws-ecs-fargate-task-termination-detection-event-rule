@@ -4,7 +4,7 @@ name: upgrade-main
 on:
   workflow_dispatch: {}
   schedule:
-    - cron: 2 18 * * 2
+    - cron: 25 18 8 * *
 jobs:
   upgrade:
     name: Upgrade
