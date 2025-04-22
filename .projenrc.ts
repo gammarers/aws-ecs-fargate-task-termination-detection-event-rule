@@ -2,9 +2,9 @@ import { awscdk, javascript } from 'projen';
 const project = new awscdk.AwsCdkConstructLibrary({
   author: 'yicr',
   authorAddress: 'yicr@users.noreply.github.com',
-  cdkVersion: '2.80.0',
-  typescriptVersion: '5.5.x',
-  jsiiVersion: '5.5.x',
+  cdkVersion: '2.189.1',
+  typescriptVersion: '5.7.x',
+  jsiiVersion: '5.7.x',
   defaultReleaseBranch: 'main',
   name: '@gammarers/aws-ecs-fargate-task-termination-detection-event-rule',
   description: 'This an AWS ECS Fargate task termination detection Event Rule.',
@@ -17,11 +17,11 @@ const project = new awscdk.AwsCdkConstructLibrary({
   ],
   npmAccess: javascript.NpmAccess.PUBLIC,
   minNodeVersion: '18.0.0',
-  workflowNodeVersion: '22.4.x',
+  workflowNodeVersion: '22.x',
   depsUpgradeOptions: {
     workflowOptions: {
       labels: ['auto-approve', 'auto-merge'],
-      schedule: javascript.UpgradeDependenciesSchedule.expressions(['2 18 * * 2']),
+      schedule: javascript.UpgradeDependenciesSchedule.expressions(['25 18 8 * *']),
     },
   },
   autoApproveOptions: {
